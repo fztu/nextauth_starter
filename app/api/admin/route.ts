@@ -13,3 +13,5 @@ export async function GET() {
         status: 403,
     });
 }
+
+export const runtime = 'edge';

@@ -7,3 +7,4 @@ const NewVerificationPage = () => {
 }
  
 export default NewVerificationPage;
+export const runtime = 'edge';

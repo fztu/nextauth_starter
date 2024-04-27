@@ -68,3 +68,4 @@ const AdminPage = () => {
 }
 
 export default AdminPage;
+export const runtime = 'edge'

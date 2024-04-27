@@ -12,3 +12,4 @@ const ServerPage = async () => {
 }
  
 export default ServerPage;
+export const runtime = 'edge';
