@@ -230,4 +230,4 @@ const SettingsPage = () => {
 }
 
 export default SettingsPage;
-export const runtime = 'edge';
+// export const runtime = 'edge';

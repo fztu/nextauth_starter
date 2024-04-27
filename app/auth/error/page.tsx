@@ -9,4 +9,4 @@ const AuthErrorPage = () => {
 }
  
 export default AuthErrorPage;
-export const runtime = 'edge';
+// export const runtime = 'edge';

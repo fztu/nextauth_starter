@@ -16,4 +16,4 @@ const ClientPage = () => {
 }
  
 export default ClientPage;
-export const runtime = 'edge';
+// export const runtime = 'edge';

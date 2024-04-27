@@ -7,4 +7,4 @@ const LoginPage = () => {
 }
  
 export default LoginPage;
-export const runtime = 'edge';
+// export const runtime = 'edge';
