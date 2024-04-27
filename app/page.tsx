@@ -18,7 +18,7 @@ export default function Home() {
           Get start with NextAuth
         </p>
         <div>
-          <LoginButton mode="redirect">
+          <LoginButton mode="modal" asChild>
             <Button variant="secondary" size="lg">
               Sign In
             </Button>

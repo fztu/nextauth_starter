@@ -30,6 +30,10 @@ export const UserButton = () => {
                 </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-40" align="end">
+                <DropdownMenuItem>
+                    <FaUser className="mr-2 h-4 w-4" />
+                    <p>Welcome {user?.name}</p>
+                </DropdownMenuItem>                
                 <LogoutButton>
                     <DropdownMenuItem>
                         <ExitIcon className="mr-2 h-4 w-4" />

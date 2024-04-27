@@ -4,8 +4,37 @@ import { FormSuccess } from "@/components/auth/form-success";
 import { RoleGate } from "@/components/auth/role-gate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { toast } from "sonner";
+import { admin } from "@/actions/admin";
 
 const AdminPage = () => {
+    const onApiRouteClick = () => {
+        fetch('/api/admin')
+            .then((response) => {
+                if (response.ok) {
+                    // return response.json();
+                    console.log("Admin API route successful");
+                    toast.success("Admin API route successful!");
+                } else {
+                    console.log("Admin API route failed");
+                    toast.error("Forbidden!");
+                }
+            })
+    };
+
+    const onServerActionClick = () => {
+        admin()
+            .then((data) => {
+                if (data.error) {
+                    toast.error(data.error);
+                }
+
+                if (data.success) {
+                    toast.success(data.success);
+                }
+            })
+    }
+
     return (
         <Card className="w-[600px]">
             <CardHeader>
@@ -21,7 +50,7 @@ const AdminPage = () => {
                     <p className="text-sm font-medium">
                         Admin-only API route
                     </p>
-                    <Button>
+                    <Button onClick={onApiRouteClick}>
                         Click to test
                     </Button>
                 </div>
@@ -29,7 +58,7 @@ const AdminPage = () => {
                     <p className="text-sm font-medium">
                         Admin-only server action
                     </p>
-                    <Button>
+                    <Button onClick={onServerActionClick}>
                         Click to test
                     </Button>
                 </div>

@@ -6,6 +6,7 @@ import { useCurrentUser } from "@/hooks/use-current-user";
 
 const ClientPage = () => {
     const user = useCurrentUser();
+    console.log(user);
     return ( 
         <UserInfo 
             user={user} 
